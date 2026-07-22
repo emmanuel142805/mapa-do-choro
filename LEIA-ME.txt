@@ -1,0 +1,47 @@
+MAPA DO CHORO, PACOTE DO APLICATIVO
+====================================
+
+O QUE TEM AQUI
+- index.html: o aplicativo completo (quiz, lógica, resultado, tela de atenção, entrega)
+- manifest.json e sw.js: fazem o app funcionar como PWA (ícone na tela inicial, abre em tela cheia)
+- icons/: ícones do app em todos os tamanhos necessários
+- Não precisa de nenhum servidor, banco de dados ou build. É só HTML, CSS e JavaScript puro.
+
+COMO TESTAR RÁPIDO (antes de publicar)
+1. Extraia o zip numa pasta.
+2. Dê duplo clique no index.html. Ele abre no navegador e o quiz já funciona.
+3. Algumas funções (o ícone instalável, o funcionamento offline) só funcionam de verdade
+   quando o arquivo está hospedado num endereço https, não no duplo clique direto.
+
+COMO PUBLICAR (opção mais rápida, sem conta, só para testar)
+1. Acesse https://app.netlify.com/drop
+2. Arraste a pasta inteira (a pasta, não o zip) para a área indicada.
+3. Em segundos você recebe um link tipo https://nome-aleatorio.netlify.app
+4. Esse link já é funcional e pode ser testado no celular.
+
+COMO PUBLICAR DE VERDADE (com domínio próprio, recomendado para o produto final)
+1. Crie uma conta gratuita em https://netlify.com ou https://vercel.com
+2. Publique a pasta (upload manual ou conectando um repositório do GitHub)
+3. Se quiser um endereço com a cara do produto, registre um domínio, por exemplo
+   mapadochoro.com.br na Registro.br (custa por volta de R$ 40 por ano)
+4. Aponte o domínio para o Netlify ou Vercel, seguindo o passo a passo que a própria
+   plataforma mostra na tela de configuração de domínio
+
+COMO LIGAR NA KIWIFY
+1. Ao cadastrar o produto na Kiwify, escolha entrega por "Área de Membros da Kiwify"
+   (ela é gratuita e cuida de login e liberação automática sozinha)
+2. Dentro da área de membros, crie um único conteúdo com um botão ou link
+   apontando para o endereço onde você publicou o index.html
+   (o link do Netlify/Vercel ou do seu domínio próprio)
+3. Nesse mesmo conteúdo, adicione o texto convidando a mãe a tocar em
+   "Adicionar à tela inicial" assim que abrir o app pela primeira vez,
+   para que da próxima vez o acesso seja direto pelo ícone, sem precisar
+   entrar de novo na Kiwify
+
+ANTES DE PUBLICAR PARA VALER
+- Os 7 links da tela final ("Seu mapa está pronto") estão como placeholder (href="#").
+  Assim que os PDFs estiverem prontos no Canva, troque o href="#" de cada
+  <a href="#" data-material="..."> no index.html pelo link real de cada PDF
+  (pode ser um link do Google Drive, ou hospedado junto com o próprio site)
+- O texto "Conteúdo educativo. Não substitui avaliação médica." aparece fixo
+  no rodapé de toda tela, de propósito, não é bug
